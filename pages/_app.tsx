@@ -1,5 +1,5 @@
 import { Header } from "@/components/Layout/Header";
-import { Nav } from "@/components/Nav";
+import { Nav } from "@/components/parts/Nav";
 import { Footer } from "@/components/Layout/Footer";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";

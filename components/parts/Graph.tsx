@@ -33,15 +33,11 @@ export const data = {
       pointBorderColor: "#fff",
       pointHoverBackgroundColor: "#fff",
       pointHoverBorderColor: "#000",
+      innerHeight: "200px",
     },
   ],
 };
 
 export const Graph = (props: any) => {
-  return (
-    <Radar
-      data={data}
-      style={{ width: props.style.width, height: props.style.height }}
-    />
-  );
+  return <Radar data={data} />;
 };

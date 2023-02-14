@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { ArticleTitle } from "@/components/ArticleTitle";
+import { ArticleTitle } from "@/components/parts/ArticleTitle";
 
 const tableList = [
   { tr: `販売業者`, td: `株式会社 土井珈琲` },

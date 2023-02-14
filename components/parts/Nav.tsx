@@ -19,17 +19,18 @@ export const Nav = (props: any) => {
         height: "50px",
       }}
     >
-      {nav.map((link, index: number) =>
-        index == 3 ? (
-          <Link key={index} href={"/" + link.href}>
-            <p>{link.title}</p>
-          </Link>
-        ) : (
-          <a key={index} href={"#" + link.href}>
-            {link.title}
-          </a>
-        )
-      )}
+      <style jsx>
+        {`
+          a:hover {
+            border-bottom: 1px solid red;
+          }
+        `}
+      </style>
+      {nav.map((link, index: number) => (
+        <Link key={index} href={`${index !== 3 ? "/" : "#"}` + link.href}>
+          <p>{link.title}</p>
+        </Link>
+      ))}
     </nav>
   );
 };

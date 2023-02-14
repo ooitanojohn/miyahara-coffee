@@ -1,5 +1,5 @@
-import { Nav } from "@/components/Nav";
-import { Title } from "@/components/Title";
+import { Nav } from "@/components/parts/Nav";
+import { Title } from "@/components/parts/Title";
 import Link from "next/link";
 
 const help = [
@@ -10,13 +10,27 @@ const help = [
 
 export const Footer = (Props: any) => {
   return (
-    <footer>
-      <Title />
+    <footer style={{ padding: "50px" }}>
+      <Title jusCon="center" />
       <Nav />
-      <div>
-        {help.map((link) => (
-          <Link key={link.href} href={link.href}>
-            <p>{link.title}</p>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "end",
+          gap: "5px",
+          paddingTop: "20px",
+        }}
+      >
+        {help.map((link, index: number) => (
+          <Link key={index} href={link.href}>
+            <p
+              style={{
+                borderRight: `${index !== 2 ? "2px solid black" : "none"}`,
+                paddingRight: "4px",
+              }}
+            >
+              {link.title}
+            </p>
           </Link>
         ))}
       </div>

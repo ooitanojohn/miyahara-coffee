@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { ArticleTitle } from "@/components/ArticleTitle";
+import { ArticleTitle } from "@/components/parts/ArticleTitle";
 
 /** 文章リスト */
 const sectionList = [

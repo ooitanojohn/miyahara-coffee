@@ -9,15 +9,15 @@ export const ArticleTitle = (Props: any) => {
         backgroundColor: "#E8E4DE",
       }}
     >
-      <h2
-        style={{
-          borderBottom: "double 5px red",
-          width: "60%",
-          textAlign: "center",
-        }}
-      >
-        <span>{Props.title}</span>
-      </h2>
+      <div style={{ borderBottom: "double 5px red", padding: "5px 15px" }}>
+        <h2
+          style={{
+            textAlign: "center",
+          }}
+        >
+          {Props.title}
+        </h2>
+      </div>
     </div>
   );
 };

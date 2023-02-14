@@ -1,8 +1,6 @@
-import { ArticleTitle } from "@/components/ArticleTitle";
-import { Graph } from "@/components/Graph";
+import { ArticleTitle } from "@/components/parts/ArticleTitle";
+import { Graph } from "@/components/parts/Graph";
 import Image from "next/image";
-import Link from "next/link";
-import { StringLiteral } from "typescript";
 
 const Product = () => {
   return (
