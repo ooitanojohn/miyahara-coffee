@@ -6,8 +6,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Zen_Antique, M_PLUS_Rounded_1c } from "@next/font/google";
 
-const zen_Antique = Zen_Antique({ weight: ["400"] });
-const m_PLUS_Rounded_1c = M_PLUS_Rounded_1c({ weight: ["400", "700"] });
+const zen_Antique = Zen_Antique({ weight: "400", subsets: ["latin"] });
+const m_PLUS_Rounded_1c = M_PLUS_Rounded_1c({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -22,13 +25,10 @@ export default function App({ Component, pageProps }: AppProps) {
         h2 {
           font-family: ${zen_Antique.style.fontFamily};
         }
-        h3 {
-          font-family: ${m_PLUS_Rounded_1c.style.fontFamily};
-        }
-        a {
-          font-family: ${m_PLUS_Rounded_1c.style.fontFamily};
-        }
-        p {
+        h3,
+        a,
+        p,
+        pre {
           font-family: ${m_PLUS_Rounded_1c.style.fontFamily};
         }
       `}</style>
