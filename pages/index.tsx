@@ -17,12 +17,14 @@ export default function Home() {
         desc={conceptList[0].desc}
         src={conceptList[0].src}
         mb="50px"
+        Direction={undefined}
       />
       <Concept
         title={conceptList[1].title}
         desc={conceptList[1].desc}
         src={conceptList[1].src}
         Direction="row-reverse"
+        mb={""}
       />
       {/* Graph */}
       <section
@@ -105,6 +107,8 @@ export default function Home() {
         title="カップにコーヒーを注いで完成"
         desc="コーヒーを淹れるのにかかった時間は15時20分。\n 普段よりもちょっと丁寧に淹れたコーヒーで心豊かなひとときを過ごしてみてはいかがでしょうか。"
         src="/image/n_14@2x.png"
+        mb={""}
+        Direction={undefined}
       />
       {/* shop */}
       <ArticleTitle title="ご購入方法" id="#shop" />

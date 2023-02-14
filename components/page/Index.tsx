@@ -1,13 +1,21 @@
 import Image from "next/image";
 
-export const Concept = (props: any) => {
+type ConceptProps = {
+  mb: string;
+  Direction: string | undefined;
+  title: string;
+  desc: string;
+  src: string;
+};
+
+export const Concept = (props: ConceptProps) => {
   return (
     <section
       style={{
         display: "flex",
         marginBottom: `${props.mb}`,
         backgroundColor: "#F9F8F6",
-        flexDirection: `${props.Direction}`,
+        flex: `${props.Direction ? props.Direction : undefined}`,
       }}
     >
       <div style={{ flexBasis: "45%", padding: "40px" }}>
