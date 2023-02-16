@@ -6,10 +6,17 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Zen_Antique, M_PLUS_Rounded_1c } from "@next/font/google";
 
-const zen_Antique = Zen_Antique({ weight: "400", subsets: ["latin"] });
-const m_PLUS_Rounded_1c = M_PLUS_Rounded_1c({
-  weight: ["400", "700"],
+const zen_Antique = Zen_Antique({
+  weight: "400",
   subsets: ["latin"],
+  // display:"swap"
+  // fallback: ["メイリオ", "Meiryo UI"],
+});
+const m_PLUS_Rounded_1c = M_PLUS_Rounded_1c({
+  weight: ["100", "300", "400", "500", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  // fallback: ["メイリオ", "Meiryo UI"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {

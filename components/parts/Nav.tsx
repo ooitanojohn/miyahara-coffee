@@ -21,13 +21,20 @@ export const Nav = (props: any) => {
     >
       <style jsx>
         {`
-          a:hover {
+          #nav:hover {
             border-bottom: 1px solid red;
           }
         `}
       </style>
       {nav.map((link, index: number) => (
-        <Link key={index} href={`${index !== 3 ? "/" : "#"}` + link.href}>
+        <Link
+          id="nav"
+          key={index}
+          href={
+            `${index === 0 || index === 1 || index === 3 ? "#" : "/"}` +
+            link.href
+          }
+        >
           <p>{link.title}</p>
         </Link>
       ))}

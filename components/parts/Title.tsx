@@ -18,7 +18,7 @@ export const Title = (props: any) => {
         width={50}
         height={50}
       ></Image>
-      <h1 style={{ lineHeight: "80px" }}>宮原珈琲</h1>
+      <h1 style={{ lineHeight: "80px", fontSize: "x-large" }}>宮原珈琲</h1>
     </Link>
   );
 };

@@ -13,6 +13,7 @@ export const ArticleTitle = (Props: any) => {
         <h2
           style={{
             textAlign: "center",
+            fontSize: "larger",
           }}
         >
           {Props.title}

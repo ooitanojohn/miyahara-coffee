@@ -2,7 +2,7 @@ import Image from "next/image";
 
 type ConceptProps = {
   mb: string;
-  Direction: string | undefined;
+  Direction: string;
   title: string;
   desc: string;
   src: string;
@@ -15,7 +15,7 @@ export const Concept = (props: ConceptProps) => {
         display: "flex",
         marginBottom: `${props.mb}`,
         backgroundColor: "#F9F8F6",
-        flex: `${props.Direction ? props.Direction : undefined}`,
+        flexDirection: `${props.Direction}` as "row",
       }}
     >
       <div style={{ flexBasis: "45%", padding: "40px" }}>
@@ -40,8 +40,13 @@ export const Concept = (props: ConceptProps) => {
     </section>
   );
 };
-
-export const Recipe = (props: any) => {
+type RecipeProps = {
+  imgUrl: string;
+  index: string | number;
+  title: string;
+  desc: string;
+};
+export const Recipe = (props: RecipeProps) => {
   return (
     <section
       style={{
