@@ -17,7 +17,7 @@ export default function Home() {
         desc={conceptList[0].desc}
         src={conceptList[0].src}
         mb="50px"
-        Direction={"column"}
+        Direction={"row"}
       />
       <Concept
         title={conceptList[1].title}
@@ -134,7 +134,7 @@ export default function Home() {
           宮原珈琲が独自にこだわってブレンドしたコーヒー豆を量や製法を選択してご購入いただけます。
         </p>
         <Link
-          href="/shop"
+          href="/product"
           style={{ padding: "20px 40px", border: "1px grey solid" }}
         >
           ご購入ページへ

@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-key */
 import Link from "next/link";
 const nav = [
-  { href: "concept", title: "豆の魅力" },
-  { href: "drink", title: "美味しい淹れ方" },
+  { href: "", title: "豆の魅力" },
+  { href: "", title: "美味しい淹れ方" },
   { href: "product", title: "商品" },
-  { href: "shop", title: "ご購入方法" },
-  { href: "help", title: "お問い合わせ" },
+  { href: "product", title: "ご購入方法" },
+  { href: "", title: "お問い合わせ" },
 ];
 export const Nav = (props: any) => {
   return (
@@ -31,7 +31,7 @@ export const Nav = (props: any) => {
           id="nav"
           key={index}
           href={
-            `${index === 0 || index === 1 || index === 3 ? "#" : "/"}` +
+            `${index === 0 || index === 1 || index === 3 ? "/" : "/"}` +
             link.href
           }
         >

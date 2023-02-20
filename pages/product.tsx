@@ -11,12 +11,13 @@ const Product = () => {
       <ArticleTitle title="ご購入ページ" />
       {/* 注文 */}
       <div style={{ display: "flex" }}>
+        {/* 画像、グラフ */}
         <section style={{ width: "50%" }}>
           <Image
             src="/image/n_2_t@2x.png"
             alt="宮原ブレンド"
             width={500}
-            height={500}
+            height={300}
             style={{ width: "100%", objectFit: "cover" }}
           ></Image>
           <div
@@ -26,6 +27,7 @@ const Product = () => {
               flexDirection: "column",
               alignItems: "center",
               backgroundColor: "#EDEBE9",
+              height: "400px",
             }}
           >
             <h3
@@ -39,7 +41,7 @@ const Product = () => {
             </h3>
             <p>ビターチョコレートのような甘みを重視したブレンド。</p>
             <p>毎日飲んでも飽きない味わいと、柔らかな口当たりです。</p>
-            <div style={{ height: "400px" }}>
+            <div style={{ height: "300px" }}>
               <Graph />
             </div>
           </div>
@@ -59,7 +61,7 @@ const Product = () => {
           </h3>
           {productList.map((product: any, index) => (
             <ProductList key={index} title={product.title}>
-              <BtnList key={index} props={product.btnList} />
+              <BtnList key={index} props={product} />
             </ProductList>
           ))}
         </section>
@@ -124,7 +126,13 @@ const Product = () => {
 const ProductList = (props: any, children: any) => {
   return (
     <>
-      <p style={{ borderBottom: "1px solid grey", paddingBottom: "10px" }}>
+      <p
+        style={{
+          borderBottom: "1px solid grey",
+          paddingBottom: "10px",
+          marginBottom: "30px",
+        }}
+      >
         {props.title}
       </p>
       {props.children}
@@ -133,24 +141,68 @@ const ProductList = (props: any, children: any) => {
 };
 
 const BtnList = ({ props }: any) => {
-  console.log(props);
   return (
-    <Link
-      // key={props.index}
-      href=""
+    <div
       style={{
         display: "flex",
-        // flexDirection: `${index}`,
-        gap: "5px",
-        justifyContent: "center",
-        border: "1px grey solid",
-        padding: "10px",
+        flexWrap: "wrap",
+        gap: "10px",
+        paddingBottom: "50px",
       }}
     >
-      <p>temp</p>
-      {/* <p>{props.txt}</p>
-      <p>{props.desc}</p> */}
-    </Link>
+      <Link
+        href=""
+        style={{
+          textAlign: "center",
+          width: "calc(50% - 20px)",
+          border: "1px grey solid",
+          padding: "10px 20px",
+          backgroundColor: "white",
+        }}
+      >
+        {props.btnList1}
+      </Link>
+      <Link
+        href=""
+        style={{
+          textAlign: "center",
+          width: "calc(50% - 20px)",
+          border: "1px grey solid",
+          padding: "10px 20px",
+          backgroundColor: "white",
+        }}
+      >
+        {props.btnList2}
+      </Link>
+      <Link
+        href=""
+        style={{
+          textAlign: "center",
+          width: "calc(50% - 20px)",
+          border: "1px grey solid",
+          padding: "10px 20px",
+          backgroundColor: "white",
+        }}
+      >
+        {props.btnList3}
+      </Link>
+      {props.btnList4 !== undefined ? (
+        <Link
+          href=""
+          style={{
+            textAlign: "center",
+            width: "calc(50% - 20px)",
+            border: "1px grey solid",
+            padding: "10px 20px",
+            backgroundColor: "white",
+          }}
+        >
+          {props.btnList4}
+        </Link>
+      ) : (
+        <></>
+      )}
+    </div>
   );
 };
 

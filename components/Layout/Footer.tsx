@@ -5,7 +5,7 @@ import Link from "next/link";
 const help = [
   { href: "/", title: "利用規約" },
   { href: "/policy", title: "プライバシーポリシー" },
-  { href: "/", title: "特定取引法に基づく表示" },
+  { href: "/law", title: "特定取引法に基づく表示" },
 ];
 
 export const Footer = (Props: any) => {

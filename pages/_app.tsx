@@ -35,7 +35,9 @@ export default function App({ Component, pageProps }: AppProps) {
         h3,
         a,
         p,
-        pre {
+        pre,
+        th,
+        td {
           font-family: ${m_PLUS_Rounded_1c.style.fontFamily};
         }
       `}</style>
