@@ -53,7 +53,7 @@ export const Recipe = (props: RecipeProps) => {
     <section
       style={{
         display: "flex",
-        height: "400px",
+        height: "600px",
         padding: "50px",
         background:
           "linear-gradient(0deg, #FAFAF8 0%, #FAFAF8 70%, #E8E4DE 70%, #E8E4DE 100%)",
