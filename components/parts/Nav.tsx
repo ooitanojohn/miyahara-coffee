@@ -1,4 +1,3 @@
-// import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
 const nav = [
   { href: "#concept", title: "豆の魅力" },
@@ -30,11 +29,7 @@ export const Nav = (props: any) => {
       </style>
       {nav.map((link, index: number) =>
         index === 0 || index === 1 || index === 3 ? (
-          <a
-            href={link.href}
-            id="nav"
-            key={index}
-          >
+          <a href={link.href} id="nav" key={index}>
             <p>{link.title}</p>
           </a>
         ) : (
