@@ -1,0 +1,9 @@
+.toggleWrapper {
+  toggle-root: click;
+}
+.toggleButton {
+  toggle-trigger: click;
+}
+.toggleButton:toggle(click) {
+  background-color: #55c500;
+}

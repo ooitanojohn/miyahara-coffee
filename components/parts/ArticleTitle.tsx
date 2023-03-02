@@ -1,6 +1,7 @@
 export const ArticleTitle = (Props: any) => {
   return (
     <div
+      id={Props.id}
       style={{
         display: "flex",
         alignItems: "center",

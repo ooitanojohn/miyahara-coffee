@@ -1,8 +1,8 @@
+import styles from "./product.module.css";
 import { ArticleTitle } from "@/components/parts/ArticleTitle";
 import { Graph } from "@/components/parts/Graph";
 import Image from "next/image";
 import { productList } from "@/data/product";
-import Link from "next/link";
 import { Concept } from "@/components/page/Index";
 
 const Product = () => {
@@ -80,6 +80,7 @@ const Product = () => {
         <p
           style={{
             fontSize: "x-large",
+            marginRight: "50px",
           }}
         >
           注文数量
@@ -88,11 +89,26 @@ const Product = () => {
           action="/"
           style={{ height: "100px", display: "flex", alignItems: "center" }}
         >
-          <input
-            type="number"
-            placeholder="1個"
-            style={{ borderRight: "1px solid black" }}
-          ></input>
+          <div
+            style={{
+              borderRight: "1px solid black",
+              height: "50px",
+              marginRight: "50px",
+              textAlign: "center",
+              fontSize: "x-large",
+              lineHeight: "50px",
+            }}
+          >
+            <input
+              type="number"
+              placeholder="1個"
+              style={{
+                width: "200px",
+                border: "1px solid black",
+                marginRight: "50px",
+              }}
+            ></input>
+          </div>
           <button
             type="submit"
             style={{
@@ -108,6 +124,7 @@ const Product = () => {
       </div>
       {/* 定期便 */}
       <Concept
+        id=""
         title="定期便のご案内"
         desc="定期便でご注文することで、毎月の購入の手間なく
 宮原珈琲を楽しめます。
@@ -143,6 +160,7 @@ const ProductList = (props: any, children: any) => {
 const BtnList = ({ props }: any) => {
   return (
     <div
+      className={styles.toggleWrapper}
       style={{
         display: "flex",
         flexWrap: "wrap",
@@ -150,8 +168,8 @@ const BtnList = ({ props }: any) => {
         paddingBottom: "50px",
       }}
     >
-      <Link
-        href=""
+      <button
+        className={styles.toggleButton}
         style={{
           textAlign: "center",
           width: "calc(50% - 20px)",
@@ -161,9 +179,9 @@ const BtnList = ({ props }: any) => {
         }}
       >
         {props.btnList1}
-      </Link>
-      <Link
-        href=""
+      </button>
+      <button
+        className={styles.toggleButton}
         style={{
           textAlign: "center",
           width: "calc(50% - 20px)",
@@ -173,9 +191,9 @@ const BtnList = ({ props }: any) => {
         }}
       >
         {props.btnList2}
-      </Link>
-      <Link
-        href=""
+      </button>
+      <button
+        className={styles.toggleButton}
         style={{
           textAlign: "center",
           width: "calc(50% - 20px)",
@@ -185,10 +203,10 @@ const BtnList = ({ props }: any) => {
         }}
       >
         {props.btnList3}
-      </Link>
+      </button>
       {props.btnList4 !== undefined ? (
-        <Link
-          href=""
+        <button
+          className={styles.toggleButton}
           style={{
             textAlign: "center",
             width: "calc(50% - 20px)",
@@ -198,7 +216,7 @@ const BtnList = ({ props }: any) => {
           }}
         >
           {props.btnList4}
-        </Link>
+        </button>
       ) : (
         <></>
       )}

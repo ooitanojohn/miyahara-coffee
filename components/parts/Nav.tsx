@@ -1,12 +1,14 @@
-/* eslint-disable react/jsx-key */
+// import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
 const nav = [
-  { href: "", title: "豆の魅力" },
-  { href: "", title: "美味しい淹れ方" },
-  { href: "product", title: "商品" },
-  { href: "product", title: "ご購入方法" },
-  { href: "", title: "お問い合わせ" },
+  { href: "#concept", title: "豆の魅力" },
+  { href: "#drink", title: "美味しい淹れ方" },
+  { href: "/product", title: "商品" },
+  { href: "#shop", title: "ご購入方法" },
+  { href: "/help", title: "お問い合わせ" },
 ];
+// const url =
+
 export const Nav = (props: any) => {
   return (
     <nav
@@ -22,22 +24,25 @@ export const Nav = (props: any) => {
       <style jsx>
         {`
           #nav:hover {
-            border-bottom: 1px solid red;
+            cursor: pointer;
           }
         `}
       </style>
-      {nav.map((link, index: number) => (
-        <Link
-          id="nav"
-          key={index}
-          href={
-            `${index === 0 || index === 1 || index === 3 ? "/" : "/"}` +
-            link.href
-          }
-        >
-          <p>{link.title}</p>
-        </Link>
-      ))}
+      {nav.map((link, index: number) =>
+        index === 0 || index === 1 || index === 3 ? (
+          <a
+            href={link.href}
+            id="nav"
+            key={index}
+          >
+            <p>{link.title}</p>
+          </a>
+        ) : (
+          <Link id="nav" key={index} href={link.href}>
+            <p>{link.title}</p>
+          </Link>
+        )
+      )}
     </nav>
   );
 };

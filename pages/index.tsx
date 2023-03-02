@@ -13,6 +13,7 @@ export default function Home() {
       />
       {/* concept */}
       <Concept
+        id=""
         title={conceptList[0].title}
         desc={conceptList[0].desc}
         src={conceptList[0].src}
@@ -20,6 +21,7 @@ export default function Home() {
         Direction={"row"}
       />
       <Concept
+        id="concept"
         title={conceptList[1].title}
         desc={conceptList[1].desc}
         src={conceptList[1].src}
@@ -52,7 +54,7 @@ export default function Home() {
         <Graph />
       </section>
       {/* drink */}
-      <ArticleTitle title="コーヒー豆の美味しい淹れ方" id="#drink" />
+      <ArticleTitle title="コーヒー豆の美味しい淹れ方" id="drink" />
       <section
         style={{
           display: "flex",
@@ -104,6 +106,7 @@ export default function Home() {
         )
       )}
       <Concept
+        id=""
         title="カップにコーヒーを注いで完成"
         desc="コーヒーを淹れるのにかかった時間は15時20分。\n 普段よりもちょっと丁寧に淹れたコーヒーで心豊かなひとときを過ごしてみてはいかがでしょうか。"
         src="/image/n_14@2x.png"
@@ -111,7 +114,7 @@ export default function Home() {
         Direction={""}
       />
       {/* shop */}
-      <ArticleTitle title="ご購入方法" id="#shop" />
+      <ArticleTitle title="ご購入方法" id="shop" />
       <section
         style={{
           backgroundColor: "#FAFAF8",

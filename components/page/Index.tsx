@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 type ConceptProps = {
+  id: string;
   mb: string;
   Direction: string;
   title: string;
@@ -11,6 +12,7 @@ type ConceptProps = {
 export const Concept = (props: ConceptProps) => {
   return (
     <section
+      id={props.id}
       style={{
         display: "flex",
         marginBottom: `${props.mb}`,
